@@ -4,8 +4,8 @@ function AdminUserServiceClient() {
   this.findUserById = findUserById;
   this.deleteUser = deleteUser;
   this.updateUser = updateUser;
-  // this.url = "https://young-shore-20354.herokuapp.com/api/user";
-  this.url = "http://localhost:8080/api/user";
+  this.url = "https://whispering-coast-65095.herokuapp.com/api/user";
+  // this.url = "http://localhost:8080/api/user";
   var self = this;
 
   /* accepts a user object and adds it to a collection of users */
