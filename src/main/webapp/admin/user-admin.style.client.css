@@ -1,0 +1,23 @@
+.btn-group {
+  display: flex;
+}
+
+.table-responsive {
+  display: flex;
+}
+
+body {
+  background-image: url("https://www.northeastern.edu/gsg/wp-content/uploads/2018/11/neu_fall.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+}
+
+.bg-white {
+  opacity: 0.97;
+}
+
+.wbdv-hidden {
+  display: none;
+}

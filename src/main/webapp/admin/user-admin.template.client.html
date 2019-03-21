@@ -1,0 +1,138 @@
+<html>
+  <head>
+    <title>User Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="../models/user.model.client.js"></script>
+    <script src="../services/user.service.client.js"></script>
+    <script src="user-admin.component.client.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./user-admin.style.client.css" />
+  </head>
+  <body>
+    <div class="container-fluid pt-3">
+      <div class="row">
+        <div class="col m-4 shadow rounded bg-white">
+          <h1>User Admin</h1>
+          <!-- <hr /> -->
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Username</th>
+                  <th>Password</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Role</th>
+                  <th>&nbsp;</th>
+                </tr>
+                <tr class="wbdv-form">
+                  <td>
+                    <input
+                      id="idFld"
+                      class="form-control"
+                      placeholder="id"
+                      type="hidden"
+                    />
+                    <input
+                      id="usernameFld"
+                      class="form-control"
+                      placeholder="Username"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      id="passwordFld"
+                      class="form-control"
+                      placeholder="Password"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      id="firstNameFld"
+                      class="form-control"
+                      placeholder="First Name"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      id="lastNameFld"
+                      class="form-control"
+                      placeholder="Last Name"
+                    />
+                  </td>
+                  <td>
+                    <select id="roleFld" class="form-control">
+                      <option value="Faculty">Faculty</option>
+                      <option value="Student">Student</option>
+                      <option value="Admin">Admin</option>
+                    </select>
+                  </td>
+
+                  <td>
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        id="searchBtn"
+                        class="btn btn-warning m-1 wbdv-search"
+                      >
+                        <span class="fas fa-search"></span></button
+                      ><button
+                        type="button"
+                        id="addBtn"
+                        class="btn btn-primary m-1 wbdv-create"
+                      >
+                        <span class="fas fa-plus"></span></button
+                      ><button
+                        type="button"
+                        id="confirmBtn"
+                        class="btn btn-success m-1 wbdv-update"
+                      >
+                        <span class="fas fa-check"></span>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </thead>
+              <tbody class="wbdv-tbody">
+                <tr class="wbdv-template wbdv-hidden">
+                  <td class="wbdv-username">ada</td>
+                  <td class="wbdv-password">&nbsp;</td>
+                  <td class="wbdv-first-name">Ada</td>
+                  <td class="wbdv-last-name">Lovelace</td>
+                  <td class="wbdv-role">FACULTY</td>
+                  <td class="wbdv-actions">
+                    <button
+                      type="button"
+                      id="wbdv-edit"
+                      class="btn btn-primary wbdv-edit"
+                    >
+                      <span class="fas fa-pencil-alt"></span>
+                    </button>
+                    <button
+                      type="button"
+                      id="wbdv-remove"
+                      class="btn btn-danger wbdv-remove"
+                    >
+                      <span class="fas fa-times"></span>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

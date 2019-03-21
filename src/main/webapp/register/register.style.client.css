@@ -1,0 +1,18 @@
+.centered {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-image: url("https://www.khoury.northeastern.edu/wp-content/uploads/2017/06/neu_m0412k23b-hero-image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+}
+
+.bg-white{
+    opacity: 0.95;
+}

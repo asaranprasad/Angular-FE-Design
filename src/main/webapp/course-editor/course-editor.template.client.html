@@ -1,0 +1,605 @@
+<html>
+  <head>
+    <title>Course Editor</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./course-editor.style.client.css" />
+  </head>
+  <body style="padding-top: 60px">
+    <!-- TopNav -->
+    <nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-md shadow">
+      <a class="navbar-brand" href="#">
+        <button type="button" class="btn btn-dark">
+          <b>X</b>
+        </button>
+        <b>CS5610 - WebDev</b>
+      </a>
+
+      <div
+        class="collapse navbar-collapse flex-row-reverse"
+        id="navbarNavDropdown"
+      >
+        <ul class="nav nav-pills top">
+          <li class="nav-item bg-dark">
+            <a class="nav-link" href="#">Build</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Pages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Theme</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Store</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Apps</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link white-plus" href="#">
+              <b>+</b>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main row">
+      <div class="col-3 side-menu">
+        <ul class="nav flex-column nav-pills pt-4">
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              >Module 1 - jQuery
+              <button type="button" class="btn btn-sm btn-dark float-right">
+                X
+              </button></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#"
+              >Module 2 - React
+              <button type="button" class="btn btn-sm btn-dark float-right">
+                X
+              </button></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              >Module 3 - Redux
+              <button type="button" class="btn btn-sm btn-dark float-right">
+                X
+              </button></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              >Module 4 - Native
+              <button type="button" class="btn btn-sm btn-dark float-right">
+                X
+              </button></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              >Module 5 - Angular
+              <button type="button" class="btn btn-sm btn-dark float-right">
+                X
+              </button></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              >Module 6 - Node
+              <button type="button" class="btn btn-sm btn-dark float-right">
+                X
+              </button></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              >Module 7 - Mongo
+              <button type="button" class="btn btn-sm btn-dark float-right">
+                X
+              </button></a
+            >
+          </li>
+        </ul>
+
+        <!-- Bottom Right Add Icon -->
+        <i class="fas fa-plus fa-stack-1x fa-inverse wd-bottom"></i>
+      </div>
+
+      <div class="col-9">
+        <div class="container pt-5">
+          <div class="row">
+            <div class="col-6"></div>
+            <div class="col-6">
+              <div class="d-inline-flex mx-2 float-right">
+                <h5>Preview</h5>
+                <i class="fas fa-toggle-on fa-2x mx-2"></i>
+              </div>
+              <button class="btn btn-success d-inline-flex mx-2 float-right">
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-----------------------
+        ---- HEADING WIDGET -----
+        ---------------------->
+        <div class="row m-4">
+          <div class="card col">
+            <!-- Card Title -->
+            <div class="card-title row flex-row p-2">
+              <div class="col-md-3 d-inline-flex">
+                <h4>Heading Widget</h4>
+              </div>
+              <div class="col-md-9">
+                <div class="d-inline-flex pr-2 float-right">
+                  <button class="btn btn-danger">
+                    <i class="fa fa-times"></i>
+                  </button>
+                </div>
+
+                <div class="d-inline-flex pr-1 my-auto float-right">
+                  <select>
+                    <option>Heading</option>
+                    <option>Paragraph</option>
+                    <option>List</option>
+                    <option>Image</option>
+                    <option>Link</option>
+                  </select>
+                </div>
+
+                <div class="d-inline-flex pr-2 float-right">
+                  <button class="btn btn-warning">
+                    <i class="fa fa-arrow-down"></i>
+                  </button>
+                </div>
+
+                <div class="d-inline-flex pr-2 float-right">
+                  <button class="btn btn-warning">
+                    <i class="fa fa-arrow-up"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+
+            <div class="card-body">
+              <div class="row p-1">
+                <div class="col">
+                  <input
+                    class="form-control"
+                    placeholder="Heading text"
+                    id="heading-text"
+                  />
+                </div>
+              </div>
+              <div class="row p-1">
+                <div class="col">
+                  <select class="form-control">
+                    <option value="1">Heading 1</option>
+                    <option value="2">Heading 2</option>
+                    <option value="3">Heading 3</option>
+                    <option value="4">Heading 4</option>
+                    <option value="5">Heading 5</option>
+                    <option value="6">Heading 6</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row p-1">
+                <div class="col">
+                  <input
+                    class="form-control"
+                    placeholder="Widget name"
+                    id="widget-name"
+                  />
+                </div>
+              </div>
+
+              <hr />
+
+              <div class="row p-1">
+                <div class="col">
+                  <h5>Preview</h5>
+                </div>
+              </div>
+
+              <div class="row p-1">
+                <div class="col">
+                  <h1>Heading text</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ----------------------- -->
+
+        <!-----------------------
+        ---- PARAGRAPH WIDGET -----
+        ---------------------->
+        <div class="row m-4">
+          <div class="card col">
+            <!-- Card Title -->
+            <div class="card-title row flex-row p-2">
+              <div class="col-md-5 d-inline-flex">
+                <h4>Paragraph Widget</h4>
+              </div>
+              <div class="col-md-7">
+                <div class="d-inline-flex pr-2 float-right">
+                  <button class="btn btn-danger">
+                    <i class="fa fa-times"></i>
+                  </button>
+                </div>
+
+                <div class="d-inline-flex pr-1 my-auto float-right">
+                  <select>
+                    <option>Paragraph</option>
+                    <option>Heading</option>
+
+                    <option>List</option>
+                    <option>Image</option>
+                    <option>Link</option>
+                  </select>
+                </div>
+
+                <div class="d-inline-flex pr-2 float-right">
+                  <button class="btn btn-warning">
+                    <i class="fa fa-arrow-down"></i>
+                  </button>
+                </div>
+
+                <div class="d-inline-flex pr-2 float-right">
+                  <button class="btn btn-warning">
+                    <i class="fa fa-arrow-up"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+
+            <div class="card-body">
+              <div class="row p-1">
+                <div class="col">
+                  <textarea
+                    class="form-control"
+                    placeholder="Paragraph Text"
+                    id="heading-text"
+                    rows="3"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="row p-1">
+                <div class="col">
+                  <input
+                    class="form-control"
+                    placeholder="Widget name"
+                    id="widget-name"
+                  />
+                </div>
+              </div>
+
+              <hr />
+
+              <div class="row p-1">
+                <div class="col">
+                  <h5>Preview</h5>
+                </div>
+              </div>
+
+              <div class="row p-1">
+                <div class="col">
+                  <p>Paragraph Text</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ----------------------- -->
+
+        <!-----------------------
+        ---- LIST WIDGET -----
+        ---------------------->
+        <div class="row m-4">
+          <div class="card col">
+            <!-- Card Title -->
+            <div class="card-title row flex-row p-2">
+              <div class="col-md-5 d-inline-flex">
+                <h4>List Widget</h4>
+              </div>
+              <div class="col-md-7">
+                <div class="d-inline-flex pr-2 float-right">
+                  <button class="btn btn-danger">
+                    <i class="fa fa-times"></i>
+                  </button>
+                </div>
+
+                <div class="d-inline-flex pr-1 my-auto float-right">
+                  <select>
+                    <option>List</option>
+                    <option>Paragraph</option>
+                    <option>Heading</option>
+                    <option>Image</option>
+                    <option>Link</option>
+                  </select>
+                </div>
+
+                <div class="d-inline-flex pr-2 float-right">
+                  <button class="btn btn-warning">
+                    <i class="fa fa-arrow-down"></i>
+                  </button>
+                </div>
+
+                <div class="d-inline-flex pr-2 float-right">
+                  <button class="btn btn-warning">
+                    <i class="fa fa-arrow-up"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+
+            <div class="card-body">
+              <div class="row p-1">
+                <div class="col">
+                  <textarea
+                    class="form-control"
+                    placeholder="Put each item in a separate row"
+                    id="heading-text"
+                    rows="3"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="row p-1">
+                <div class="col">
+                  <select class="form-control">
+                    <option value="1">Unordered list</option>
+                    <option value="2">Ordered list</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row p-1">
+                <div class="col">
+                  <input
+                    class="form-control"
+                    placeholder="Widget name"
+                    id="widget-name"
+                  />
+                </div>
+              </div>
+
+              <hr />
+
+              <div class="row p-1">
+                <div class="col">
+                  <h5>Preview</h5>
+                </div>
+              </div>
+
+              <div class="row p-1">
+                <div class="col">
+                  <ul>
+                    <li>Put each</li>
+                    <li>item in</li>
+                    <li>a separate row</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ----------------------- -->
+
+        <!-----------------------
+        ---- IMAGE WIDGET -----
+        ---------------------->
+        <div class="row m-4">
+          <div class="card col">
+            <!-- Card Title -->
+            <div class="card-title row flex-row p-2">
+              <div class="col-md-5 d-inline-flex">
+                <h4>Image Widget</h4>
+              </div>
+              <div class="col-md-7">
+                <div class="d-inline-flex pr-2 float-right">
+                  <button class="btn btn-danger">
+                    <i class="fa fa-times"></i>
+                  </button>
+                </div>
+
+                <div class="d-inline-flex pr-1 my-auto float-right">
+                  <select>
+                    <option>Image</option>
+                    <option>Paragraph</option>
+                    <option>List</option>
+                    <option>Heading</option>
+                    <option>Link</option>
+                  </select>
+                </div>
+
+                <div class="d-inline-flex pr-2 float-right">
+                  <button class="btn btn-warning">
+                    <i class="fa fa-arrow-down"></i>
+                  </button>
+                </div>
+
+                <div class="d-inline-flex pr-2 float-right">
+                  <button class="btn btn-warning">
+                    <i class="fa fa-arrow-up"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+
+            <div class="card-body">
+              <div class="row p-1">
+                <div class="col">
+                  <input
+                    class="form-control"
+                    placeholder="https://studentlife.northeastern.edu/wp-content/uploads/2016/08/neu_m039z499g.jpeg"
+                    id="image-text"
+                  />
+                </div>
+              </div>
+
+              <div class="row p-1">
+                <div class="col">
+                  <input
+                    class="form-control"
+                    placeholder="Widget name"
+                    id="widget-name"
+                  />
+                </div>
+              </div>
+
+              <hr />
+
+              <div class="row p-1">
+                <div class="col">
+                  <h5>Preview</h5>
+                </div>
+              </div>
+
+              <div class="row p-1">
+                <div class="col">
+                  <img
+                    src="https://studentlife.northeastern.edu/wp-content/uploads/2016/08/neu_m039z499g.jpeg"
+                    alt=""
+                    width="300"
+                    height="200"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ----------------------- -->
+
+        <!-----------------------
+        ---- LINK WIDGET -----
+        ---------------------->
+        <div class="row m-4">
+          <div class="card col">
+            <!-- Card Title -->
+            <div class="card-title row flex-row p-2">
+              <div class="col-md-5 d-inline-flex">
+                <h4>Link Widget</h4>
+              </div>
+              <div class="col-md-7">
+                <div class="d-inline-flex pr-2 float-right">
+                  <button class="btn btn-danger">
+                    <i class="fa fa-times"></i>
+                  </button>
+                </div>
+
+                <div class="d-inline-flex pr-1 my-auto float-right">
+                  <select>
+                    <option>Link</option>
+                    <option>Paragraph</option>
+                    <option>List</option>
+                    <option>Image</option>
+                    <option>Heading</option>
+                  </select>
+                </div>
+
+                <div class="d-inline-flex pr-2 float-right">
+                  <button class="btn btn-warning">
+                    <i class="fa fa-arrow-down"></i>
+                  </button>
+                </div>
+
+                <div class="d-inline-flex pr-2 float-right">
+                  <button class="btn btn-warning">
+                    <i class="fa fa-arrow-up"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+
+            <div class="card-body">
+              <div class="row p-1">
+                <div class="col">
+                  <input
+                    class="form-control"
+                    placeholder="https://www.youtube.com/user/jannunzi"
+                    id="link-text"
+                  />
+                </div>
+              </div>
+              <div class="row p-1">
+                <div class="col">
+                  <input
+                    class="form-control"
+                    placeholder="Link text"
+                    id="link-text"
+                  />
+                </div>
+              </div>
+              <div class="row p-1">
+                <div class="col">
+                  <input
+                    class="form-control"
+                    placeholder="https://www.youtube.com/user/jannunzi"
+                    id="link-text"
+                  />
+                </div>
+              </div>
+              <div class="row p-1">
+                <div class="col">
+                  <input
+                    class="form-control"
+                    placeholder="Widget name"
+                    id="widget-name"
+                  />
+                </div>
+              </div>
+
+              <hr />
+
+              <div class="row p-1">
+                <div class="col">
+                  <h5>Preview</h5>
+                </div>
+              </div>
+
+              <div class="row p-1">
+                <div class="col">
+                  <a href="https://www.youtube.com/user/jannunzi">Link text</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ----------------------- -->
+
+        <!-- Add Widget -->
+        <!-- Bottom Right Add Icon -->
+        <span class="fa-stack fa-2x wd-bottom-right" id="add-widget">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
+        </span>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+.navbar-toggler {
+  display: block !important;
+}
+
+.collapse {
+  max-width: 200px;
+}
+
+.icon-a {
+  color: #fff;
+  font-size: 0.9em;
+}
+.icon-b {
+  color: red;
+}
+
+.navbar {
+  background-color: #fcfcfc;
+  opacity: 0.95;
+}
+
+body {
+  background-image: url("https://studentlife.northeastern.edu/wp-content/uploads/2016/08/neu_m040d7928.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+}
+
+.bg-white {
+  opacity: 0.95;
+}
+
+.wd-bottom-right {
+  color: red;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+.day-band {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.1em;
+  color: #75d175;
+}
+
+a.nodec {
+  text-decoration: none !important;
+}

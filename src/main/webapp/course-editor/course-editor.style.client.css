@@ -1,0 +1,71 @@
+.navbar {
+  opacity: 0.95;
+}
+
+body {
+  /* background-image: url("https://studentlife.northeastern.edu/wp-content/uploads/2016/08/neu_m039z499g.jpeg"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+}
+
+.bg-white {
+  opacity: 0.95;
+}
+
+.white-plus {
+  font-weight: bolder;
+  color: #fff;
+}
+
+.nav.nav-pills.top .nav-item .nav-link.active {
+  background-color: rgb(26, 26, 26);
+}
+
+.side-menu {
+  background-color: rgb(41, 41, 41);
+  height: 100%;
+}
+
+.nav.flex-column.nav-pills .nav-item .nav-link {
+  background-color: rgb(50, 56, 62);
+  color: #fff;
+  margin: 0 5 10 10;
+}
+
+.nav.flex-column.nav-pills .nav-item .nav-link.nav-link.active {
+  background-color: #4286f4;
+}
+
+.active .btn,
+.active .btn:hover,
+.active .btn:active,
+.active .btn:visited {
+  background-color: #4286f4 !important;
+  border-color: #4286f4 !important;
+}
+
+.nav.nav-pills .nav-item .nav-link {
+  color: #fff;
+}
+
+.wd-bottom {
+  color: white;
+  margin-top: 20;
+  /* position: fixed; */
+  /* bottom: 20px;
+  right: 20px; */
+}
+
+.wd-bottom-right {
+  color: red;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+.main.row {
+  padding: 0;
+  margin: 0;
+}

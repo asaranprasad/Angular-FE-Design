@@ -1,0 +1,18 @@
+.centered {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-image: url("https://studentlife.northeastern.edu/wp-content/uploads/2016/08/neu_m040d7928.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+}
+
+.bg-white{
+    opacity: 0.95;
+}
